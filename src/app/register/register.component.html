@@ -1,0 +1,57 @@
+<body>
+    <div class="account-pages my-5 pt-sm-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    <div class="card overflow-hidden">
+                        <div class="card-body pt-0">
+                            <h3 class="text-center mt-5 mb-4">
+                                <a href="index.html" class="d-block auth-logo">
+                                    <img src="assets/images/logo-dark.png" alt="" height="30" class="auth-logo-dark">
+                                    <img src="assets/images/logo-light.png" alt="" height="30" class="auth-logo-light">
+                                </a>
+                            </h3>
+                            <div class="p-3">
+                                <h4 class="text-muted font-size-18 mb-1 text-center"> Registeration</h4>
+                                <p class="text-muted text-center">Get your free Lexa account now.</p>
+                                <form  [formGroup]="signupforms" class="form-horizontal mt-4" >
+
+                                    <div class="mb-3">
+                                        <label for="useremail">Email</label>
+                                        <input formControlName="email" type="email" class="form-control" id="useremail" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" placeholder="Enter email" required>
+        
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="username">Username</label>
+                                        <input  formControlName="username" type="text" class="form-control" id="username" placeholder="Enter username">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="userpassword">Password</label>
+                                        <input  formControlName="password" type="password" class="form-control" id="userpassword" placeholder="Enter password">
+                                    </div>
+
+                                    <div class="mb-3 row mt-4">
+                                        <div class="col-8 text-end">
+                                            <button  style="background-color: #4e73df;color: white;" [disabled]="signupforms.invalid" class="btn btn-primary w-md waves-effect waves-light" type="submit" (click)="handlesubmit()">Register</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-0 row">
+                                        <div class="col-12 mt-4">
+                                            <p class="text-muted mb-0 font-size-14">By registering you agree to the Lexa <a  style="color: #4e73df;" href="#" class="text-primary">Terms of Use</a></p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5 text-center">
+                        <p>Already have an account ? <a  href="" class="text-primary"> Login </a> </p>
+                      © Copyright 2023 Chedy sakly 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

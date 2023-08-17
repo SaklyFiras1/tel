@@ -1,0 +1,67 @@
+.card{
+  width: 380px;
+ height: 460px;
+padding: 2px;
+position: relative;
+  overflow: hidden;
+
+
+}
+.card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid black;
+
+  
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 10px;
+  margin-top: -35px;
+   /* Adjust the gap between cards */
+}
+
+
+
+
+
+.card:hover .card-options {
+  display: block;
+}
+.card-options {
+  display: none;
+  position: absolute;
+  bottom: 0px; /* Adjust the positioning as needed */
+  right: 5px;
+  left: 4px; /* Adjust the positioning as needed */
+  z-index: 0;
+  background-color: transparent;
+  padding: 3px;
+}
+
+.card-date {
+  display: none;
+  position: absolute;
+ top: 2px; /* Adjust the positioning as needed */
+   /* Adjust the positioning as needed */
+  z-index: 1;
+background:#4e73df;
+ font-size: 15px;
+ text-size-adjust: 10px;
+  color: white;
+}
+.card:hover .card-date {
+  display: block;
+
+}
+.custom-600x400 {
+  width: 500px;
+  height: 300px;
+}
+
+
+
+

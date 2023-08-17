@@ -1,0 +1,104 @@
+<body data-sidebar="dark">
+    <div id="layout-wrapper" >
+<app-navbar></app-navbar>
+     <app-sidebar></app-sidebar>
+     <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+              
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="page-title-box">
+                      
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Acceuil</a></li>
+                          
+                                    <li class="breadcrumb-item active">Evènement</li>
+                                </ol>
+                        </div>
+                        <h4><I style="color: rgb(34, 56, 255);font-size: 25px;" class="typcn typcn-document-add"></I> Ajouter evènement</h4>
+                </div>
+                </div>
+            <div  class="col-11" >
+                <form  class="form" [formGroup]="eventform" >
+                    <div class="row">
+                        <div class="col-12 col-md-5 form__cover">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-12">
+                                    <div class="form__img">
+                                        <label *ngIf="(onFileSelected)"  style="color: rgb(148, 147, 147);" for="form__img-upload">{{selectedmage}}</label>
+                                        <input formControlName="image"  (change)="onFileSelected($event)"  id="form__img-upload" type="file" accept=".png, .jpg, .jpeg">
+                                        <img    style=" width: 280px;
+                                        height:520px;" id="form__img"  [src]="selectedImage" *ngIf="selectedImage" alt="Selected Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-7 form__content">
+                            <br><br><br>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form__group">
+                                        <input style="color:black" formControlName="nomEvent" type="text" class="form__input" placeholder="Nom evènement">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form__group">
+                                        <textarea formControlName="Description" type="text" id="text"  class="form__textarea" placeholder="Description"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="form__group">
+                                     
+
+<input formControlName="dateEvent" type="date"  class="form__input" style="color: rgb(0, 0, 0);"  />
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="form__group">
+                                        <input style="color :black" formControlName="lieu" type="text" class="form__input" placeholder="Lieu evènement">
+                                    </div>
+                                </div>
+
+
+                                
+
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="form__group">
+                                        <input formControlName="nombrbillet" style="color: black;" type="number" class="form__input" placeholder="Nombre de billets à vendre">
+                                    </div>
+                                </div>
+
+                                
+
+                              
+                            </div>
+                        </div>
+
+                           
+
+                              
+                                <div class="col-12  d-flex  justify-content-center">
+                         <div class="row">
+                                
+                                    <a  (click)="handlepost()"  class="form__btn ">publish</a>
+                                    &nbsp;
+                        
+                                    <a  href="evenements" style="color: white;"  class="form__btn bg-danger">Annuler</a>
+                                </div>
+                            </div>
+                            </div>
+                      
+                  
+                </form>
+            </div>
+            <!-- end form -->
+        </div>
+    </div>
+
+    </div></div></body>

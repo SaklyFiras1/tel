@@ -1,0 +1,15 @@
+.custom-snackbar {
+    background-color: #ff0000; /* Replace with your desired background color */
+    color: #ffffff; /* Text color */
+  }::ng-deep snack-bar-container.custom-snackbar{
+    padding: 20px !important;
+    background-color: red !important;
+    color: white !important;
+  }  ::ng-deep .mat-simple-snackbar.custom-snackbar {
+    background-color: #2196F3; /* Your desired background color */
+    color: white; /* Text color */
+  }
+  
+  ::ng-deep .mat-simple-snackbar.custom-snackbar .mat-simple-snackbar-action {
+    color: white; /* Button text color */
+  }

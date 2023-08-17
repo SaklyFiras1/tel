@@ -1,0 +1,81 @@
+<body data-sidebar="dark">
+    <div id="layout-wrapper">
+     <app-navbar></app-navbar>
+     <app-sidebar></app-sidebar>
+     <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid"></div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="page-title-box ">
+        
+                      <h4>  <i style="color: rgb(34, 56, 255);" class="dripicons-tags"></i> &nbsp;Evènements</h4>
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Acceuil</a></li>
+                      
+                                <li class="breadcrumb-item active">Evènements</li>
+                             
+                               
+                            </ol>
+                    
+                    </div>
+            
+        
+        </div> 
+        <div class="float-right" style="justify-content: right;top: -50px;">
+            <a  href="ajouter_evenement" class="btn"  style="float: right;background:#4e73df;color: white;"><I style="font-size: 15px;color: black;" class="typcn typcn-plus-outline"></I>&nbsp;Crèer evènement</a></div>
+
+            </div><div class="card-container">
+                
+     
+                    
+                    <div class="col-md-4 " *ngFor="let e of events">
+                        <div class="card">
+                         <img class="card-img-top img-fluid custom-600x400" src="./assets/images/{{e.image}}"  alt="Card image cap">
+                          <div class="card-body">
+                            <h5 style="color: black;font-size: 18px;" class="card-title">{{e.nomEvent}}</h5>
+                            <p class="card-text">{{e.Description}}</p>
+                            
+                          </div>
+                          <div class="card-date">
+                            <a style="padding: 10px; font-size: 10px;"> <i style="color: rgb(255, 255, 255); "class="dripicons-stopwatch"></i>&nbsp;&nbsp;{{e.dateEvent}} </a> 
+                        </div>
+                        
+                        <div class="card-options ">
+                          <a class="btn">
+                            <div class="progress mb-1" style="width: 55px;background-color: rgb(226, 226, 227);">
+                                <div  class="progress-bar "  role="progressbar" style="width: 10%;background-color: rgb(73, 120, 222);" aria-valuenow="10" aria-valuemin="10" aria-valuemax="10"></div>
+                         
+                            </div>
+                        </a> 
+                        <a class="btn"><b>10/{{e.nombrbillet}}  <i style="color: rgb(28, 28, 29); "class="ti-ticket"></i></b></a> 
+                        |
+                          <button style="  margin: 4px;" type="button" class="btn btn-dark "><i style="color: rgb(255, 255, 255);" class="ti-pencil-alt"></i></button>
+                          <button  style="  margin: 4px;" type="button" class="btn btn-danger "><i style="color: rgb(255, 253, 253);" class="ti-trash"></i></button>
+                          <button  style="  margin: 4px;" type="button" class="btn btn-success "><i style="color: rgb(255, 255, 255);" class="dripicons-article  "></i></button>
+                          <button  style="  margin: 4px;" type="button" class="btn btn-warning"><i style="color: rgb(255, 255, 255); "class="ti-ticket"></i></button>
+                         
+                      
+                        </div>
+                                   
+                       
+                          </div>
+                          
+                        </div>
+
+                        
+                    
+                              </div>
+                            </div>
+                  </div>
+                    </div>
+                    
+                
+                
+
+     
+
+
+
+
+</body>
